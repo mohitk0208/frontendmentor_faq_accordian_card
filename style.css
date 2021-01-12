@@ -61,6 +61,7 @@ body {
 
 .faq-container {
     padding: 10%;
+    color: hsl(238, 29%, 16%);
 }
 
 .faq-container h1 {
@@ -84,6 +85,7 @@ body {
 .answer {
     display: none;
     padding: 5px 0 10px 0;
+    color: hsl(240, 6%, 50%);
 }
 
 .question-item[data-open=true] .question p {
@@ -91,6 +93,9 @@ body {
 }
 
 .question-item[data-open=true] .question img {
+
+    color: hsl(14, 88%, 65%);
+
     transform: rotate(180deg);
 
     transition: transform 250ms ease-in-out;
@@ -98,4 +103,41 @@ body {
 
 .question-item[data-open=true] .answer {
     display: block;
+}
+
+@media (max-width:700px) {
+
+
+.container {
+    height: clamp(75vh,auto,90vh);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.images-container {
+    background-image: url("./images/bg-pattern-mobile.svg");
+    background-position: top -10% center;
+}
+
+.img__box {
+    display: none;
+}
+
+.women-image {
+    overflow: visible;
+}
+
+.img__women {
+    width: 75%;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.faq-container h1 {
+    text-align: center;
+}
+
+
+
 }
